@@ -46,11 +46,11 @@ int main()
 	float deposit;
 
 	cout << "*** Welcome to our Banking System ***" << endl;
-	cout << "Please enter your first name ___  ";
+	cout << "Please enter your first name ____ ";
 	cin >> fName;
-	cout << "Please enter your last name ___  ";
+	cout << "Please enter your last name _____  ";
 	cin >> lName;
-	cout << "Please enter your balance  ___  ";
+	cout << "Please enter your balance  _____  ";
 	cin >> balance;
 	cout << "Welcome " << fName << endl;
 	Account acc(fName, lName, balance);
