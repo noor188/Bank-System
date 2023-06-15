@@ -60,7 +60,8 @@ int main()
 	cout << "Balance " << acc.getBalance() << endl;
 	cout << "Please enter deposit amount ___  ";
 	cin >> deposit;
-	cout << "Balance after deposit  " << acc.Deposit(deposit) << endl;
+	acc.Deposit(deposit);
+	cout << "Balance after deposit " << acc.getBalance() << endl;
 }
 
 Account ::Account(string fName, string lName, float balance)
@@ -69,30 +70,15 @@ Account ::Account(string fName, string lName, float balance)
 	lastName = lName;
 	NextAccountNumber++;
 	accountNumber = NextAccountNumber;
-	/* add balance*/
+	this->balance = balance;
 }
 
-long Account::getAccountNumber()
-{
-	return accountNumber;
-}
+long Account::getAccountNumber() { return accountNumber; }
 
-string Account::getFirstName()
-{
-	return firstName;
-}
+string Account::getFirstName() { return firstName; }
 
-string Account::getLastName()
-{
-	return lastName;
-}
+string Account::getLastName() { return lastName; }
 
-float Account::getBalance()
-{
-	return balance;
-}
+float Account::getBalance() { return balance; }
 
-void Account::Deposit(float amount)
-{
-	balance += ammount;
-}
+void Account::Deposit(float amount) { balance += amount; }
